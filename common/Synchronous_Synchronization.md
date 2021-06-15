@@ -30,6 +30,6 @@
 - Trong khoa học máy tính, Asynchronous I/O là 1 dạng khi chờ input và output sẽ phép các process khác tiếp tục chạy trước khi quá trình truyền data kết thúc.
 ## Ví dụ
 - Chúng ta gửi request từ client lên server. Chúng ta sử dụng asynchronous  I/O. Các task vụ cần response data của server vẫn sẽ chờ server trả về (I/O hoàn thành) sau đó mới tiếp tục hoạt đông, nó vẫn bị chặn. Nhưng các task không phụ thuộc vào response của server có thể tiếp tục chạy mà không cần đợi.
-![img.png](image/img2.png)
+- ![img.png](image/img2.png)
 ## Khi nào sử dụng.
 - Khi trong một process của chúng ta có nhiều task. Các có task phụ thuộc Response của I/O có task không phụ thuộc.
