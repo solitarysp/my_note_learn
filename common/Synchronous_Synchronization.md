@@ -16,4 +16,20 @@
     - Đề cập đến ý tưởng giữa nhiều bản copies của một tệp data được nhất quán để đảm bảo tính toàn vẹn của dữ liệu
         - Ví dụ: Google driver sync, Version control
         - https://en.wikipedia.org/wiki/Data_synchronization
+    
+# Synchronous I/O, or blocking I/O
+## What is ?
+- Khi một thread bắt đầu thao tác I/O, thread sẽ chờ cho đến khi yêu cầu I/O hoàn tất
+## Ví dụ
+- Khi tìm kiếm dữ liệu trên ổ cứng, hệ thống sẽ cần đợi đĩa quay đến ví trị data sau đó trả về data, sau đó chúng ta sẽ tiếp tục xử lý. Tại thời điểm đĩa quay tìm data, hệ thống của chúng ta sẽ chờ cho đến khi nhận được response.
+- ![img.png](image/img.png)
+## Khi nào sử dụng
+- Sử dụng khi các task cần phụ thuộc vào kết quả của I/O. Khi đó các task đó cần chờ (block) response của I/O để tiếp tục thực hiện
 #Asynchronous I/O
+## What is ??
+- Trong khoa học máy tính, Asynchronous I/O là 1 dạng khi chờ input và output sẽ phép các process khác tiếp tục chạy trước khi quá trình truyền data kết thúc.
+## Ví dụ
+- Chúng ta gửi request từ client lên server. Chúng ta sử dụng asynchronous  I/O. Các task vụ cần response data của server vẫn sẽ chờ server trả về (I/O hoàn thành) sau đó mới tiếp tục hoạt đông, nó vẫn bị chặn. Nhưng các task không phụ thuộc vào response của server có thể tiếp tục chạy mà không cần đợi.
+![img.png](image/img2.png)
+## Khi nào sử dụng.
+- Khi trong một process của chúng ta có nhiều task. Các có task phụ thuộc Response của I/O có task không phụ thuộc.
