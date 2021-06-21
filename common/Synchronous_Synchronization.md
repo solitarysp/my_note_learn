@@ -41,7 +41,13 @@
 - Ví dụ: Javascript là một synchronous, blocking, single-threaded language. Vì nó sync và còn single-thread nên ví dụ chúng ta sử dụng ```alert("Hello World")``` khi chức năng này hiển thị, toàn bộ website sẽ bị kẹt dừng lại cho đến khi chúng ta loại bo cảnh báo.
 - Ví dụ 2 : Khi chúng ta sử dụng java web. Mỗi khi người dùng request tomcat sẽ cấp 1 thread mới để sử dụng lý cầu đó của người dùng.
     - Tất cả các task nhỏ trong luồng xử lý yêu cầu đó của khách hàng đểu được thực hiện trên luồng chính được cấp đó. Sẽ có thứ tự giữa các task chạy. Song task trước sẽ đến task sau.
+- Ví dụ 3 Với java web chạy trên tomcat server. Mỗi một request từ client gửi lên tomcat sẽ cấp phát 1 thread để tiến hành xử lý request đó. Chỉ khi nào request đó xử lý hoàn tất thì tomcat mới tiếp tục cho thread đó nhận các request khác xử lý.
 # Asynchronous programming
 ## What is ?
-- Trong asynchronous programming, các task được chia nhỏ thành những task chạy trên 1 luồng khác độc lập với thread chính
-
+- Trong asynchronous programming, từ 1 task to, task sẽ được chia nhỏ thành những task bé chạy trên 1 thread khác độc lập với thread chính.
+## Ví dụ
+- Ví dụ: Với java web chạy trên tomcat server. Khi client gửi request lên server, response sẽ được trả về ngay lập tức, thông tin request sẽ được cho vào queue để chờ xử lý.
+   - Sau khi request xử lý thành công, response data sẽ được trả về thông qua call back.
+- Ví dụ về javascript web: Bản chất javascript trên web là single thread tức chỉ có 1 thread xử lý.
+   - Tại thời điểm gửi yêu cầu bất đồng bộ lên server, yêu cầu sẽ được chuyển đến cho web APi xử lý và chúng ta sẽ định nghĩa callback. Sau đó thread có thể tiếp tục xử lý các task vụ khác.
+       - Sau khi server trả về dữ liệu, callback sẽ được kích hoạt và thread sẽ xử lý response.
