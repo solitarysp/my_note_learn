@@ -17,6 +17,7 @@
         - Ví dụ: Google driver sync, Version control
         - https://en.wikipedia.org/wiki/Data_synchronization
     
+
 # Synchronous I/O, or blocking I/O
 ## What is ?
 - Khi một thread bắt đầu thao tác I/O, thread sẽ chờ cho đến khi yêu cầu I/O hoàn tất
@@ -33,3 +34,12 @@
 - ![img.png](image/img2.png)
 ## Khi nào sử dụng.
 - Khi trong một process của chúng ta có nhiều task. Các có task phụ thuộc Response của I/O có task không phụ thuộc.
+# Synchronous programming
+## What is ?
+- Trong Synchronous programming các task được thực hiện lần lượt và chỉ khi một task hoàn thành thì các task sau mới được bắt đầu thực hiện.
+## Ví dụ
+- Ví dụ: Javascript là một synchronous, blocking, single-threaded language. Vì nó sync và còn single-thread nên ví dụ chúng ta sử dụng ```alert("Hello World")``` khi chức năng này hiển thị, toàn bộ website sẽ bị kẹt dừng lại cho đến khi chúng ta loại bo cảnh báo.
+- Ví dụ 2 : Khi chúng ta sử dụng java web. Mỗi khi người dùng request tomcat sẽ cấp 1 thread mới để sử dụng lý cầu đó của người dùng.
+    - Tất cả các task nhỏ trong luồng xử lý yêu cầu đó của khách hàng đểu được thực hiện trên luồng chính được cấp đó. Sẽ có thứ tự giữa các task chạy. Song task trước sẽ đến task sau.
+# Asynchronous programming
+
