@@ -42,4 +42,6 @@
 - Ví dụ 2 : Khi chúng ta sử dụng java web. Mỗi khi người dùng request tomcat sẽ cấp 1 thread mới để sử dụng lý cầu đó của người dùng.
     - Tất cả các task nhỏ trong luồng xử lý yêu cầu đó của khách hàng đểu được thực hiện trên luồng chính được cấp đó. Sẽ có thứ tự giữa các task chạy. Song task trước sẽ đến task sau.
 # Asynchronous programming
+## What is ?
+- Trong asynchronous programming, các task được chia nhỏ thành những task chạy trên 1 luồng khác độc lập với thread chính
 
