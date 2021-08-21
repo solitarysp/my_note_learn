@@ -58,7 +58,7 @@
 - Với Asynchronous khi có 1 công việc A được thực hiện, các công việc khác có thể được thực hiện ngay lập tức mà không cần đợi công việc A hoàn thành
 - ý tưởng của Asynchronous đưa ra là mong muốn các công việc khác có thể được thực hiện ngay mà không cần chạy theo tuần tự.
 ## 2 loại Asynchronous model
-![img.png](Blocking_NonBlocking_IO_synchronized_Asynchronized_Image_ASynchronous_Model.png)
+![img.png](image/Blocking_NonBlocking_IO_synchronized_Asynchronized_Image_ASynchronous_Model.png)
 ### Single
 - Các công việc được thực hiện mà không cần đợi các công việc khác hoàn thành, tuy nhiên tại 1 thời diểm nó vẫn sẽ chỉ thực hiện 1 công việc duy nhất. Nó tương tự như Concurrency
 ### Multiple
@@ -66,7 +66,7 @@
 # Synchronous I/O
 - Đây là việc kết hợp 2 ý tưởng Synchronous và I/O
 - Synchronous I/O là quá trình chờ đợi kết quả của quá trình I/O hoàn thành dù thành công hay thất bại trước khi tiếp tục thực hiện công việc mới.
-![img.png](Blocking_NonBlocking_IO_synchronized_Asynchronized_Image_Synchronous_IO.png)
+![img.png](image/Blocking_NonBlocking_IO_synchronized_Asynchronized_Image_Synchronous_IO.png)
 # Asynchronous I/O
 - Đây là việc kết hợp 2 ý tưởng Asynchronous và I/O
 - Asynchronous I/O là quá trình xử lý mà hệ thống sẽ tiếp tục các công việc khác mà không cần đợi kết quả của quá trình IO.
