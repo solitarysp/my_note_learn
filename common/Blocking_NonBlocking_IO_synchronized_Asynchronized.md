@@ -78,4 +78,6 @@ Nói đến sự cản trở việc thực thi các công việc tiếp theo (C�
 Non-Blocking | ASynchronous
 --- | --- 
 Nói đến việc khi bắt đầu thực hiện 1 công việc, sẽ không cản trở việc thực hiện các công việc tiếp theo. Các công việc có thể được thực hiện mà không cần đợi bất cứ điều gì (Không bị cản trở) | Nói đến các công việc có thể cùng thực hiện, không có trình tự thực hiện và trình tự kết quả.
-
+# Synchronous Programming và Asynchronous Programming
+- Với Programming, chúng ta sẽ dựa trên các ý tưởng về Synchronous hoặc Asynchronous và 1 số các kỹ thuật để tiến hành lập trình các chương trình.
+- Các chương trình máy tính sẽ hoạt động theo ý tưởng của Synchronous hoặc Asynchronous.
